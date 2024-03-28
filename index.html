@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form</title>
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+</head>
+<body>
+    <form id="dynamicForm" >
+        <h1>Dynamic Form</h1>
+    </form>
+    <div class="controls">
+        <h1>To Add Custom Input</h1>
+        <input id="customInputLabel" type="text" placeholder="Enter Label for Input field">
+        <div>
+            <label for="customType"> Select Type: </label>
+            <select id="customType">
+                <option value="text">Text</option>
+                <option value="password">Password</option>
+                <option value="email">Email</option>
+                <option value="checkBox">Check Box</option>
+                <option value="radio">Radio</option>
+                <option value="submit">Submit</option>
+            </select>
+        </div>
+        <div id="countDiv">
+            <label for="count" >Chose Number of Options</label>
+            <select name="count" id="countSelect">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <div id="countDivInput" ></div>
+        </div>        
+        <button id="addInput">Add Input </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

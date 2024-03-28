@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    padding-right: 250px ;
+    padding-left: 350px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+input , select {
+    margin: 10px;
+    padding: 5px;
+}
+
+
+.controls {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    background-color: rgb(44, 131, 22);
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+form {
+    border: solid black;
+    width: 70%;
+}
+
+form > h1 {
+    background-color: darkblue;
+    color: cornsilk;
+    padding: 30px;
+}
+
+.move-up {
+    background: url('./Assets/arrow-up-on-a-black-circle-background.png') no-repeat center center; 
+    background-size: contain; 
+    width: 24px; 
+    height: 24px; 
+    cursor: pointer;
+    margin : 5px;
+    border: none;
+}
+
+.move-down {
+    background: url('./Assets/download-symbol.png') no-repeat center center; 
+    background-size: contain; 
+    width: 24px; 
+    height: 24px; 
+    cursor: pointer;
+    margin : 5px;
+    margin-top: 10px;
+    border: none;
+}
+
+.move-up::before, .move-down::before {
+    display: inline-block;
+}
+
+.del {
+    background: url('./Assets/delete.png') no-repeat center center; 
+    background-size: contain; 
+    width: 24px; 
+    height: 24px; 
+    cursor: pointer;
+    margin : 5px;
+    border: none;
+}
