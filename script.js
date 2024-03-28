@@ -50,31 +50,37 @@ function deleteDiv() {
 function moveDivUp() {
     const moveUpButtons = document.querySelectorAll('.move-up');
     moveUpButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const inputContainer = this.parentNode;
-            console.log('Moving Up', inputContainer);
-            const previousSibling = inputContainer.previousElementSibling;
-            console.log('previous Sibling', previousSibling);
-            if (previousSibling) {
-                inputContainer.parentNode.insertBefore(inputContainer, previousSibling);
-            }
-        });
+        button.removeEventListener('click',moveUpButtonClick);
+        button.addEventListener('click', moveUpButtonClick);
     });
 }
+
+function moveUpButtonClick() {
+    const inputContainer = this.parentNode;
+    console.log('Moving Up', inputContainer);
+    const previousSibling = inputContainer.previousElementSibling;
+    console.log('previous Sibling', previousSibling);
+    if (previousSibling) {
+        dynamicForm.insertBefore(inputContainer, previousSibling);
+    }
+};
 
 function moveDivDown() {
     const moveDownButtons = document.querySelectorAll('.move-down');
     moveDownButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const inputContainer = this.parentNode;
-            console.log('Moving Down', inputContainer);
-            const nextSibling = inputContainer.nextElementSibling;
-            console.log('Next Sibling', nextSibling);
-            if (nextSibling) {
-                inputContainer.parentNode.insertBefore(nextSibling, inputContainer);
-            }
-        });
+        button.removeEventListener('click', moveDownButtonClick);
+        button.addEventListener('click', moveDownButtonClick);
     });
+}
+
+function moveDownButtonClick() {
+    const inputContainer = this.parentNode;
+    console.log('Moving Down', inputContainer);
+    const nextSibling = inputContainer.nextElementSibling;
+    console.log('Next Sibling', nextSibling);
+    if (nextSibling) {
+        inputContainer.parentNode.insertBefore(nextSibling, inputContainer);
+    }
 }
 
 
@@ -174,4 +180,4 @@ function handleSubmit(event) {
     console.log(returnedformData);   
 }
 
-// dynamicForm.addEventListener('submit', handleSubmit);
+ dynamicForm.addEventListener('submit', handleSubmit);
